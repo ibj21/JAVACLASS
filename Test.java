@@ -1,14 +1,27 @@
-public class Test{
-    public static void main(String[] args) {
-        int arr[]={3,1,2,4,5};
-        sum (arr);
+/**
+ * Animal
+ */ 
+ interface Animal {
+    public void animalsound();
+    public void sleep();
+    
+}
+
+class Pig implements Animal{
+    public void animalsound(){
+        System.out.println("pig says wee wee");
     }
-    public static void sum(int [] arr){
-        int i=0;
-        int sum=0;
-        for(i=0; i<5; i++){
-            sum+=arr[i];
-        }
-        System.out.println(sum);
+    public void sleep(){
+        System.out.println("zzz");
+    }
+
+}
+
+
+public class Test {
+    public static void main(String[] args) {
+        Pig obj= new Pig();
+        obj.animalsound();
+        obj.sleep();
     }
 }
