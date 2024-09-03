@@ -1,12 +1,27 @@
-public class Test2 {
-    public static void main(String[] args) {
-        int arr[]=m1();
-        for (int i = 0; i < arr.length; i++) {
-            System.out.println(arr[i]);
-        }
-    }
+class Animal{
+void eat(){
+System.out.println("eating");
+}
+}
+class Dog extends Animal{
+void bark(){
+System.out.println("barking");
+}
+}
 
-        public static int[] m1(){
-            return new int[] {1,2,3};
-        }
+class Cat extends Animal{
+void meow(){
+System.out.println("meowing");
+}
+}
+class Test2{
+public static void main(String [] args){
+Cat c= new Cat();
+c.meow();
+c.eat();
+
+Dog d= new Dog();
+d.bark();
+d.eat();
+}
 }

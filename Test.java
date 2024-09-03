@@ -1,27 +1,24 @@
-/**
- * Animal
- */ 
- interface Animal {
-    public void animalsound();
-    public void sleep();
-    
+class Animal{
+void eat(){
+System.out.println("eating");
+}
+}
+class Dog extends Animal{
+void bark(){
+System.out.println("barking");
+}
 }
 
-class Pig implements Animal{
-    public void animalsound(){
-        System.out.println("pig says wee wee");
-    }
-    public void sleep(){
-        System.out.println("zzz");
-    }
-
+class BabyDog extends Dog{
+void weep(){
+System.out.println("weeping");
 }
-
-
-public class Test {
-    public static void main(String[] args) {
-        Pig obj= new Pig();
-        obj.animalsound();
-        obj.sleep();
-    }
+}
+class Test{
+public static void main(String [] args){
+BabyDog obj=new BabyDog();
+obj.eat();
+obj.bark();
+obj.weep();
+}
 }
